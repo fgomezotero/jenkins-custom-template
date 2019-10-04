@@ -63,6 +63,9 @@ objects:
 - apiVersion: v1
   kind: BuildConfig
   metadata:
+    labels:
+      template: jenkins-custom-template
+      app: ${APP_NAME}
     name: custom-jenkins-build
   spec:
     source:
