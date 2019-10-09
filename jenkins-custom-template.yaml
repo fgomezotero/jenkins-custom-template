@@ -22,12 +22,6 @@ parameters:
     description: URL del Repositorio GIT donde Jenkins busca los plugins, credentials, los fichero para el Pipeline,etc...
     value: http://gitlab.paas.agesic.red.uy/franklin.gomez/jenkins-custom-template.git
     required: true
-  - name: GIT_URL_USERNAME
-    description: Nombre de usuario con permiso para acceder al GIT
-    required: true
-  - name: GIT_URL_PASSWORD
-    description: Contraseña del usuario ingresado en el paso anterior
-    required: true
   - name: GIT_RAMA
     description: Rama dentro del GIT donde jenkins va a buscar los plugins, credentials, pipeline files, etc...
     value: master
