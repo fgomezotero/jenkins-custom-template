@@ -35,19 +35,6 @@ parameters:
 
 objects:
 
-# ##########################################################################################
-# Secrets & ConfigMaps
-# ##########################################################################################
-- apiVersion: v1
-  kind: Secret
-  metadata:
-    name: git-auth-secret
-    labels:
-      template: jenkins-custom-template
-      app: ${APP_NAME}
-  stringData:
-    username: ${GIT_URL_USERNAME}
-    password: ${GIT_URL_PASSWORD}
 
 # ##########################################################################################
 # Custom Jenkins
@@ -73,8 +60,6 @@ objects:
       git:
         uri: ${GIT_URL}
         ref: ${GIT_RAMA}
-      sourceSecret:
-        name: git-auth-secret
       contextDir: configuration/jenkins
     strategy:
       sourceStrategy:
